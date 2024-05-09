@@ -76,6 +76,7 @@ export const loginByUserID = (user_id) => {
 export const handleRegister = (formData) => {
     return axios.create({}).post("https://academiaaconnect.onrender.com/auth/register", formData)
 };
+////IA
 export const handleSavePicture = (formData) => {
     return axios.create({}).post("http://localhost:2005/register", formData)
 };
