@@ -7,7 +7,6 @@ import {BsShare} from "react-icons/bs";
 import {AiOutlineInteraction} from "react-icons/ai";
 import {ImConnection} from "react-icons/im";
 import CustomButton from "../components/CustomButton"
-import GoogleButtom from "../components/GoogleButtom.jsx"
 import {BgImage, logo} from "../assets";
 import {handleLogin, handleLoginPicture, loginByUserID} from "../utils/api";
 import {UserLogin} from "../redux/userSlice";
@@ -54,9 +53,7 @@ const Login = () => {
         height: 720,
         facingMode: "user"
     };
-  const handleGoogleLogin = () => {
-    window.location.href = "https://academiaaconnect.onrender.com/auth/auth/google"; // Redirects to Google authentication route
-  };
+
     const convertBase64ToBlob = (base64String) => {
         const base64WithoutPrefix = base64String.split(',')[1];
         const byteCharacters = atob(base64WithoutPrefix);
@@ -187,15 +184,9 @@ const Login = () => {
                         title='Login'
                     />
                 }
-                {/* New Google authentication button */}</form>
+               </form>
             {!isSubmitting && <>
-                <GoogleButtom
-                    type='submit'
-                    containerStyles={`inline-flex justify-center rounded-md googleColor px-8 py-3 text-sm font-medium text-white outline-none`}
-                    onClick={handleGoogleLogin}
-
-                    title=' Login with Google'
-                />
+               
                 <CustomButton
                     type='submit'
                     containerStyles={`inline-flex justify-center rounded-md faceIDColor px-8 py-3 text-sm font-medium text-white outline-none mt-4`}
