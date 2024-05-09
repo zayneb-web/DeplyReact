@@ -68,13 +68,13 @@ export const handleFileUpload = async (uploadFile,fileType) => {
     }
 };
 export const handleLogin = (formData) => {
-    return axios.create({}).post("http://localhost:5000/auth/login", formData)
+    return axios.create({}).post("https://academiaaconnect.onrender.com/auth/login", formData)
 };
 export const loginByUserID = (user_id) => {
-    return axios.create({}).post("http://localhost:5000/auth/loginByUserID", {user_id})
+    return axios.create({}).post("https://academiaaconnect.onrender.com/auth/loginByUserID", {user_id})
 };
 export const handleRegister = (formData) => {
-    return axios.create({}).post("http://localhost:5000/auth/register", formData)
+    return axios.create({}).post("https://academiaaconnect.onrender.com/auth/register", formData)
 };
 export const handleSavePicture = (formData) => {
     return axios.create({}).post("http://localhost:2005/register", formData)
